@@ -10,27 +10,20 @@ Vcs-Browser: https://github.com/rbuehlma/xbmc-packaging
 
 Package: kodi
 Architecture: all
-Depends: kodi-bin (>= ${source:Version}),
-         kodi-bin (<< ${source:Version}.1~),
+Depends: kodi-bin,
          curl,
          libcurl3,
          mesa-utils,
          x11-utils,
-         fonts-liberation | ttf-liberation,
          fonts-dejavu-core | ttf-dejavu-core,
-         python-bluez | python-lightblue,
          python-imaging,
-         python-simplejson,
          libmad0,
          libass5 | libass4,
          libgif5 | libgif7,
          libssh-4 | libssh2-1,
          libnfs8 | libnfs4 | libnfs1,
          libbluray1,
-         libshairplay0,
          libvorbisfile3,
-         libaacs0,
-         libcec4,
          librtmp1 | librtmp0,
          libgnutls30 | libgnutls-deb0-28 | libgnutls28 | libgnutls26,
          libxslt1.1,
@@ -78,7 +71,7 @@ Description: Kodi Media Center (arch-independent data package)
  working Kodi.
 
 Package: kodi-bin
-Architecture: i386 amd64 armhf
+Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Recommends: ${shlibs:Recommends}
